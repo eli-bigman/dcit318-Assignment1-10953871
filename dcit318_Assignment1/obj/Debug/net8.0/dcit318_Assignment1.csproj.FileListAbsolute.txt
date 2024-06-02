@@ -1,0 +1,14 @@
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\bin\Debug\net8.0\dcit318_Assignment1.exe
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\bin\Debug\net8.0\dcit318_Assignment1.deps.json
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\bin\Debug\net8.0\dcit318_Assignment1.runtimeconfig.json
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\bin\Debug\net8.0\dcit318_Assignment1.dll
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\bin\Debug\net8.0\dcit318_Assignment1.pdb
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.AssemblyInfoInputs.cache
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.AssemblyInfo.cs
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.csproj.CoreCompileInputs.cache
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.dll
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\refint\dcit318_Assignment1.dll
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.pdb
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\dcit318_Assignment1.genruntimeconfig.cache
+C:\Users\Eli\source\repos\dcit318_Assignment1\dcit318_Assignment1\obj\Debug\net8.0\ref\dcit318_Assignment1.dll
