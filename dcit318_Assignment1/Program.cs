@@ -29,7 +29,7 @@
                         break;
                     case "3":
                         PrintSeparator();
-                        //TriangleTypeIdentifier();
+                        TriangleTypeIdentifier();
                         break;
                     case "4":
                         Console.WriteLine("\nExiting the program...\n");
@@ -111,6 +111,54 @@
                 else
                 {
                     Console.WriteLine("\nError: Invalid input. Please enter a valid age.");
+                }
+            }
+        }
+
+
+        static void TriangleTypeIdentifier()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter the lengths of the three sides of the triangle (or type 'exit' to return to the main menu):");
+
+                Console.Write("\nSide 1: ");
+                string input1 = Console.ReadLine();
+                if (input1.ToLower() == "exit") return;
+
+                Console.Write("\nSide 2: ");
+                string input2 = Console.ReadLine();
+                if (input2.ToLower() == "exit") return;
+
+                Console.Write("\nSide 3: ");
+                string input3 = Console.ReadLine();
+                if (input3.ToLower() == "exit") return;
+
+                if (int.TryParse(input1, out int side1) && int.TryParse(input2, out int side2) && int.TryParse(input3, out int side3))
+                {
+                    if (side1 > 0 && side2 > 0 && side3 > 0)
+                    {
+                        if (side1 == side2 && side2 == side3)
+                        {
+                            Console.WriteLine("\nThe triangle is Equilateral.");
+                        }
+                        else if (side1 == side2 || side1 == side3 || side2 == side3)
+                        {
+                            Console.WriteLine("\nThe triangle is Isosceles.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nThe triangle is Scalene.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nError: The sides must be positive numbers.\n");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error: Invalid input. Please enter valid numbers for the sides.");
                 }
             }
         }
