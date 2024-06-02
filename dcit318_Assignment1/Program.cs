@@ -1,6 +1,7 @@
 ﻿namespace dcit318_Assignment1
 {
     using System;
+    using System.Diagnostics;
 
     class Program
     {
@@ -24,14 +25,14 @@
                         break;
                     case "2":
                         PrintSeparator();
-                        //TicketPriceCalculator();
+                        TicketPriceCalculator();
                         break;
                     case "3":
                         PrintSeparator();
                         //TriangleTypeIdentifier();
                         break;
                     case "4":
-                        Console.WriteLine("\nExiting the program... 👋🏼👋🏼👋🏼\n");
+                        Console.WriteLine("\nExiting the program...\n");
                         return;
                     default:
                         Console.WriteLine("\nInvalid choice. Please enter 1, 2, 3, or 4.\n");
@@ -84,8 +85,37 @@
             }
         }
 
-        
-        
+        static void TicketPriceCalculator()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter your age (or type 'exit' to return to the main menu):");
+                string input = Console.ReadLine();
+
+                if (input.ToLower() == "exit")
+                {
+                    return;
+                }
+
+                
+                if (int.TryParse(input, out int age))
+                {
+
+                    int ticketPrice = (age <= 12 || age >= 65) ? 7 : 10;
+
+                    
+
+
+                    Console.WriteLine($"\nThe ticket price is >> GHC{ticketPrice}\n");
+                }
+                else
+                {
+                    Console.WriteLine("\nError: Invalid input. Please enter a valid age.");
+                }
+            }
+        }
+
+
         static void PrintSeparator()
         {
             Console.WriteLine(new string('-', 40));
