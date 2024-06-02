@@ -1,188 +1,60 @@
-using System;
+# dcit318-Assignment1-10953871
 
-namespace dcit318_Project
-{
-    class GradeEvaluation
-    {
-        public static void EvaluateGrades()
-        {
-            while (true)
-            {
-                Console.Write("Please enter a grade between 0 and 100 (or type 'back' to go back to the main menu): ");
-                string input = Console.ReadLine();
+This repository contains the solution for Assignment 1 of my DCIT 318 course. The assignment includes three C# console applications that perform different tasks: a grade calculator, a ticket price calculator, and a triangle type identifier. Each program is selected from a main menu and can be run repeatedly or exited to return to the main menu.
 
-                if (input.ToLower() == "back")
-                {
-                    return;
-                }
+## Table of Contents
+- [Description](#description)
+- [Programs](#programs)
+  - [Grade Calculator](#grade-calculator)
+  - [Ticket Price Calculator](#ticket-price-calculator)
+  - [Triangle Type Identifier](#triangle-type-identifier)
+- [Setup](#setup)
+- [Usage](#usage)
 
-                if (int.TryParse(input, out int grade))
-                {
-                    if (grade >= 0 && grade <= 100)
-                    {
-                        string gradeLetter;
-                        if (grade >= 90)
-                        {
-                            gradeLetter = "A";
-                        }
-                        else if (grade >= 80)
-                        {
-                            gradeLetter = "B";
-                        }
-                        else if (grade >= 70)
-                        {
-                            gradeLetter = "C";
-                        }
-                        else if (grade >= 60)
-                        {
-                            gradeLetter = "D";
-                        }
-                        else
-                        {
-                            gradeLetter = "F";
-                        }
 
-                        Console.WriteLine($"Your letter grade is: {gradeLetter}\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nError: The grade must be in the range 0-100.\n");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("\nError: Invalid input. Please enter a valid numerical grade.\n");
-                }
-            }
-        }
-    }
 
-    class TicketPriceCalculator
-    {
-        public static void CalculateTicketPrice()
-        {
-            while (true)
-            {
-                Console.Write("Please enter your age (or type 'back' to go back to the main menu): ");
-                string input = Console.ReadLine();
+## Description
+The assignment is a C# console application that allows the user to select from three different programs:
 
-                if (input.ToLower() == "back")
-                {
-                    return;
-                }
+1. **Grade Calculator**: Converts a numerical grade to a letter grade.
+2. **Ticket Price Calculator**: Calculates the price of a movie ticket based on age.
+3. **Triangle Type Identifier**: Determines the type of a triangle based on the lengths of its sides.
 
-                if (int.TryParse(input, out int age))
-                {
-                    int price = (age <= 12 || age >= 65) ? 7 : 10;
-                    Console.WriteLine($"\nYour ticket price is: ${price}\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nError: Invalid age input. Please enter a valid age.\n");
-                }
-            }
-        }
-    }
+## Programs
 
-    class TriangleTypeChecker
-    {
-        public static void IdentifyTriangleType()
-        {
-            while (true)
-            {
-                Console.WriteLine("Please enter the lengths of the three sides of the triangle (or type 'back' to go back to the main menu):");
+### Grade Calculator
+This program prompts the user to enter a numerical grade between 0 and 100. Based on the entered grade, it displays the corresponding letter grade using the following scale:
+- 90 and above: A
+- 80-89: B
+- 70-79: C
+- 60-69: D
+- Below 60: F
 
-                Console.Write("Length of side 1: ");
-                string input1 = Console.ReadLine();
-                if (input1.ToLower() == "back") return;
+### Ticket Price Calculator
+This program prompts the user to enter their age. Based on the entered age, it calculates the ticket price:
+- Standard price: GHC10
+- Discounted price (for children 12 and under, and seniors 65 and older): GHC7
 
-                Console.Write("Length of side 2: ");
-                string input2 = Console.ReadLine();
-                if (input2.ToLower() == "back") return;
+### Triangle Type Identifier
+This program prompts the user to enter the lengths of the three sides of a triangle. It then determines and displays the type of the triangle:
+- Equilateral: All three sides are equal.
+- Isosceles: Two sides are equal.
+- Scalene: No sides are equal.
 
-                Console.Write("Length of side 3: ");
-                string input3 = Console.ReadLine();
-                if (input3.ToLower() == "back") return;
+## Setup
+1. Clone the repository:
+   ```sh
+   git clone `https://github.com/eli-bigman/dcit318-Assignment1-10953871`
 
-                if (int.TryParse(input1, out int side1) && int.TryParse(input2, out int side2) && int.TryParse(input3, out int side3))
-                {
-                    if (side1 > 0 && side2 > 0 && side3 > 0)
-                    {
-                        if (side1 == side2 && side2 == side3)
-                        {
-                            Console.WriteLine("\nThe triangle is Equilateral.\n");
-                        }
-                        else if (side1 == side2 || side1 == side3 || side2 == side3)
-                        {
-                            Console.WriteLine("\nThe triangle is Isosceles.\n");
-                        }
-                        else
-                        {
-                            Console.WriteLine("\nThe triangle is Scalene.\n");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nError: All side lengths must be positive numbers.\n");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("\nError: Invalid input. Please enter valid numerical values for the sides.\n");
-                }
-            }
-        }
-    }
+2. Open the project in Visual Studio or any C# compatible IDE.
+3. Build and run the project.
 
-    class Utilities
-    {
-        public static void PrintDivider()
-        {
-            Console.WriteLine(new string('-', 40));
-        }
-    }
 
-    class Application
-    {
-        static void Main()
-        {
-            while (true)
-            {
-                Console.WriteLine("Choose an option:");
-                Console.WriteLine("1. Grade Evaluation");
-                Console.WriteLine("2. Ticket Price Calculation");
-                Console.WriteLine("3. Triangle Type Identification");
-                Console.WriteLine("4. Exit");
-                Console.Write("Enter your choice: ");
-                string choice = Console.ReadLine();
+## Usage
+1. Run the program.
+2. Select the desired program by entering the corresponding number (1, 2, or 3).
+3. Follow the prompts to enter the required information.
+4. After each program runs, you will be asked if you want to run it again or return to the main menu.
+5. To exit the application, select option 4 from the main menu.
 
-                if (choice == "1")
-                {
-                    Utilities.PrintDivider();
-                    GradeEvaluation.EvaluateGrades();
-                }
-                else if (choice == "2")
-                {
-                    Utilities.PrintDivider();
-                    TicketPriceCalculator.CalculateTicketPrice();
-                }
-                else if (choice == "3")
-                {
-                    Utilities.PrintDivider();
-                    TriangleTypeChecker.IdentifyTriangleType();
-                }
-                else if (choice == "4")
-                {
-                    Console.WriteLine("\nThank you for using the application. Goodbye!\n");
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("\nInvalid choice. Please enter 1, 2, 3, or 4.\n");
-                }
 
-                Utilities.PrintDivider();
-            }
-        }
-    }
-}
